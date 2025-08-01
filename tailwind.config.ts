@@ -13,10 +13,22 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1rem',
 			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
 				'2xl': '1400px'
 			}
+		},
+		screens: {
+			'xs': '475px',
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1536px'
 		},
 		extend: {
 			colors: {
@@ -84,6 +96,10 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				serif: ['Playfair Display', 'serif'],
+			},
+			spacing: {
+				'18': '4.5rem',
+				'88': '22rem'
 			}
 		}
 	},
@@ -101,5 +117,15 @@ export default {
 		'hover:bg-primary/90',
 		'hover:bg-secondary/90',
 		'hover:bg-accent/90',
+		// Responsive classes
+		'xs:block',
+		'sm:text-lg',
+		'md:text-xl',
+		'lg:text-2xl',
+		'xl:text-3xl',
+		'sm:grid-cols-2',
+		'lg:grid-cols-3',
+		'sm:px-6',
+		'lg:px-8',
 	]
 } satisfies Config;

@@ -47,25 +47,25 @@ const Header = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="container">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+      <div className="container px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
+          {/* Logo - responsive sizing */}
           <div 
-            className="flex items-center space-x-3 cursor-pointer"
+            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer"
             onClick={() => scrollToSection('inicio')}
           >
             <img
               src="/lovable-uploads/08b68b12-98ba-4e65-8e95-5eead742f40e.png"
               alt="Augusta Rainha Artigos Religiosos Católico"
-              className="h-12 w-auto"
+              className="h-8 sm:h-10 md:h-12 w-auto"
             />
-            <div className="hidden sm:block">
-              <h1 className={`font-serif font-semibold text-xl ${
+            <div className="hidden xs:block">
+              <h1 className={`font-serif font-semibold text-base sm:text-lg md:text-xl ${
                 isScrolled ? 'text-secondary' : 'text-white'
               }`}>
                 Augusta Rainha
               </h1>
-              <p className={`text-sm ${
+              <p className={`text-xs sm:text-sm ${
                 isScrolled ? 'text-muted-foreground' : 'text-white/80'
               }`}>
                 Artigos Religiosos
@@ -74,7 +74,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -88,11 +88,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button - hidden on small screens */}
           <div className="hidden lg:block">
             <Button
               onClick={() => scrollToSection('contato')}
-              className="bg-primary hover:bg-primary/90 text-white"
+              className="bg-primary hover:bg-primary/90 text-white text-sm px-4 py-2"
+              size="sm"
             >
               Entre em Contato
             </Button>
@@ -105,26 +106,27 @@ const Header = () => {
             className={`lg:hidden ${isScrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </Button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - improved responsiveness */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t shadow-lg">
-            <nav className="flex flex-col space-y-4 p-6">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm border-t shadow-lg">
+            <nav className="flex flex-col space-y-1 p-4 sm:p-6">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-primary transition-colors"
+                  className="text-left text-foreground hover:text-primary transition-colors py-3 px-2 text-base"
                 >
                   {item.label}
                 </button>
               ))}
               <Button
                 onClick={() => scrollToSection('contato')}
-                className="bg-primary hover:bg-primary/90 text-white mt-4"
+                className="bg-primary hover:bg-primary/90 text-white mt-4 w-full"
+                size="lg"
               >
                 Entre em Contato
               </Button>
