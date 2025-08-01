@@ -55,7 +55,7 @@ const Header = () => {
             onClick={() => scrollToSection('inicio')}
           >
             <img
-              src="/lovable-uploads/08b68b12-98ba-4e65-8e95-5eead742f40e.png"
+              src="/lovable-uploads/a3bb7af3-129c-49c5-a730-fd70feb5e8f1.png"
               alt="Augusta Rainha Artigos Religiosos Católico"
               className="h-8 sm:h-10 md:h-12 w-auto"
             />

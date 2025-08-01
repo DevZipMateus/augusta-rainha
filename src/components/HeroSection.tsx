@@ -58,7 +58,7 @@ const HeroSection = () => {
           {/* Logo - responsive sizing */}
           <div className="mb-6 sm:mb-8">
             <img
-              src="/lovable-uploads/08b68b12-98ba-4e65-8e95-5eead742f40e.png"
+              src="/lovable-uploads/a3bb7af3-129c-49c5-a730-fd70feb5e8f1.png"
               alt="Augusta Rainha Artigos Religiosos Católico"
               className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto mx-auto mb-4 sm:mb-6"
             />
