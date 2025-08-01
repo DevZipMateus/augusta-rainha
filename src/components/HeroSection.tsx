@@ -34,60 +34,60 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Reduced dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30 z-10"></div>
+      {/* Increased dark overlay for much better text readability */}
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
 
       {/* Background decorative elements - responsive positioning */}
       <div className="absolute inset-0 pointer-events-none z-20">
-        <div className="absolute top-16 sm:top-20 left-4 sm:left-10 text-white/40">
+        <div className="absolute top-16 sm:top-20 left-4 sm:left-10 text-white/50">
           <Cross size={24} className="sm:w-10 sm:h-10" />
         </div>
-        <div className="absolute top-32 sm:top-40 right-8 sm:right-20 text-white/30">
+        <div className="absolute top-32 sm:top-40 right-8 sm:right-20 text-white/40">
           <Heart size={20} className="sm:w-8 sm:h-8" />
         </div>
-        <div className="absolute bottom-24 sm:bottom-32 left-8 sm:left-20 text-white/40">
+        <div className="absolute bottom-24 sm:bottom-32 left-8 sm:left-20 text-white/50">
           <Book size={24} className="sm:w-9 sm:h-9" />
         </div>
-        <div className="absolute bottom-16 sm:bottom-20 right-6 sm:right-16 text-white/30">
+        <div className="absolute bottom-16 sm:bottom-20 right-6 sm:right-16 text-white/40">
           <Cross size={18} className="sm:w-7 sm:h-7" />
         </div>
       </div>
 
       <div className="container px-4 sm:px-6 lg:px-8 text-center z-30 relative">
         <div className="max-w-4xl mx-auto animate-on-scroll opacity-100 translate-y-0">
-          {/* Main heading - responsive typography with better mobile spacing */}
+          {/* Main heading - enhanced text shadows for better visibility */}
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2" 
-              style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
+              style={{ textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,1)' }}>
             Augusta Rainha
             <span className="block text-primary mt-2 sm:mt-3" 
-                  style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
+                  style={{ textShadow: '3px 3px 12px rgba(0,0,0,0.9), 0 0 30px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,1)' }}>
               Artigos Religiosos
             </span>
           </h1>
 
-          {/* Slogan - responsive sizing with better mobile readability */}
+          {/* Slogan - enhanced shadows and better contrast */}
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white mb-8 sm:mb-10 font-medium px-4 leading-relaxed" 
-             style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
+             style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,1)' }}>
             Mais que artigos, instrumentos de oração,
             <span className="block text-accent font-semibold mt-2" 
-                  style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
+                  style={{ textShadow: '2px 2px 10px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,1)' }}>
               onde a Fé se torna inspiração!
             </span>
           </p>
 
-          {/* Description - responsive text with better mobile spacing */}
+          {/* Description - enhanced shadows */}
           <p className="text-base sm:text-lg lg:text-xl text-white mb-10 sm:mb-12 lg:mb-14 max-w-3xl mx-auto leading-relaxed px-4" 
-             style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
+             style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.7), 1px 1px 2px rgba(0,0,0,1)' }}>
             Livros, Bíblias, imagens de santos, terços, vestuário religioso e muito mais. 
             Um espaço de bênçãos em Paulinia/SP.
           </p>
 
-          {/* CTA Buttons - improved mobile layout */}
+          {/* CTA Buttons - enhanced contrast and visibility */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-14 sm:mb-16 lg:mb-20 px-4">
             <Button
               onClick={handleWhatsApp}
               size="lg"
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-[56px]"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/80 text-white text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 min-h-[56px] font-semibold border-2 border-white/20"
             >
               <Heart className="mr-2 w-5 h-5" />
               Conheça Nossos Artigos
@@ -98,40 +98,40 @@ const HeroSection = () => {
               onClick={() => scrollToSection('sobre')}
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full border-2 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300 backdrop-blur-sm min-h-[56px]"
+              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full border-3 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300 backdrop-blur-sm min-h-[56px] font-semibold shadow-2xl bg-black/30"
             >
               Nossa História
             </Button>
           </div>
 
-          {/* Features - responsive grid with improved mobile layout */}
+          {/* Features - enhanced card contrast */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 max-w-5xl mx-auto">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white/98 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/20">
               <Book className="text-primary mx-auto mb-4 w-12 h-12 sm:w-14 sm:h-14" />
               <h3 className="font-serif text-xl sm:text-2xl font-semibold text-secondary mb-3">
                 Livros & Bíblias
               </h3>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
                 Seleção especial de livros religiosos e Bíblias para fortalecer sua fé
               </p>
             </div>
 
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white/98 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-white/20">
               <Cross className="text-accent mx-auto mb-4 w-12 h-12 sm:w-14 sm:h-14" />
               <h3 className="font-serif text-xl sm:text-2xl font-semibold text-secondary mb-3">
                 Imagens de Santos
               </h3>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
                 Belas imagens e estátuas dos santos para sua devoção diária
               </p>
             </div>
 
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
+            <div className="bg-white/98 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 sm:col-span-2 lg:col-span-1 border border-white/20">
               <Heart className="text-primary mx-auto mb-4 w-12 h-12 sm:w-14 sm:h-14" />
               <h3 className="font-serif text-xl sm:text-2xl font-semibold text-secondary mb-3">
                 Artigos Diversos
               </h3>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-medium">
                 Terços, pulseiras, velas, incensos e muito mais para sua oração
               </p>
             </div>
