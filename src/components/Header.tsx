@@ -43,13 +43,13 @@ const Header = () => {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/98 backdrop-blur-md shadow-xl border-b border-primary/10' 
-          : 'bg-black/40 backdrop-blur-md'
+          ? 'bg-white shadow-xl border-b border-primary/10' 
+          : 'bg-black/60 backdrop-blur-md'
       }`}
     >
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo - enhanced text shadows when not scrolled */}
+          {/* Logo - maximum text contrast */}
           <div 
             className="flex items-center space-x-2 sm:space-x-3 cursor-pointer flex-shrink-0"
             onClick={() => scrollToSection('inicio')}
@@ -65,23 +65,29 @@ const Header = () => {
                   ? 'text-secondary' 
                   : 'text-white'
               }`}
-                style={!isScrolled ? { textShadow: '2px 2px 8px rgba(0,0,0,0.9), 0 0 15px rgba(0,0,0,0.7)' } : {}}
+                style={!isScrolled ? { 
+                  textShadow: '3px 3px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,1), 1px 1px 4px rgba(0,0,0,1)',
+                  filter: 'drop-shadow(0 0 6px rgba(0,0,0,1))'
+                } : {}}
               >
                 Augusta Rainha
               </h1>
               <p className={`text-sm sm:text-base font-medium ${
                 isScrolled 
                   ? 'text-muted-foreground' 
-                  : 'text-white/90'
+                  : 'text-white'
               }`}
-                style={!isScrolled ? { textShadow: '1px 1px 6px rgba(0,0,0,0.8)' } : {}}
+                style={!isScrolled ? { 
+                  textShadow: '2px 2px 8px rgba(0,0,0,1), 0 0 15px rgba(0,0,0,1)',
+                  filter: 'drop-shadow(0 0 4px rgba(0,0,0,1))'
+                } : {}}
               >
                 Artigos Religiosos
               </p>
             </div>
           </div>
 
-          {/* Desktop Navigation - enhanced text visibility */}
+          {/* Desktop Navigation - maximum text visibility */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             {navItems.map((item) => (
               <button
@@ -92,7 +98,10 @@ const Header = () => {
                     ? 'text-secondary hover:text-primary' 
                     : 'text-white hover:text-primary'
                 }`}
-                style={!isScrolled ? { textShadow: '1px 1px 6px rgba(0,0,0,0.8)' } : {}}
+                style={!isScrolled ? { 
+                  textShadow: '2px 2px 8px rgba(0,0,0,1), 0 0 12px rgba(0,0,0,1)',
+                  filter: 'drop-shadow(0 0 4px rgba(0,0,0,1))'
+                } : {}}
               >
                 {item.label}
               </button>
@@ -109,6 +118,10 @@ const Header = () => {
                   : 'bg-primary hover:bg-primary/80 text-white shadow-2xl border-2 border-white/20'
               }`}
               size="default"
+              style={!isScrolled ? {
+                textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+                boxShadow: '0 10px 30px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.2)'
+              } : {}}
             >
               Entre em Contato
             </Button>
@@ -121,7 +134,7 @@ const Header = () => {
             className={`lg:hidden p-3 hover:bg-white/20 ${
               isScrolled 
                 ? 'text-secondary hover:text-primary' 
-                : 'text-white hover:text-primary bg-white/10 backdrop-blur-sm'
+                : 'text-white hover:text-primary bg-black/20 backdrop-blur-sm border border-white/20'
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -129,9 +142,9 @@ const Header = () => {
           </Button>
         </div>
 
-        {/* Mobile Menu - enhanced contrast */}
+        {/* Mobile Menu - maximum contrast */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md border-t border-primary/20 shadow-2xl">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-primary/20 shadow-2xl">
             <nav className="flex flex-col p-6">
               {navItems.map((item, index) => (
                 <button

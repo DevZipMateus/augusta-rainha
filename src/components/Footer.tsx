@@ -32,8 +32,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-secondary to-secondary/95 text-white">
-      {/* Main Footer - enhanced text visibility */}
+    <footer className="bg-secondary text-white">
+      {/* Main Footer - maximum text visibility */}
       <div className="container section-padding">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -46,11 +46,11 @@ const Footer = () => {
               />
               <div>
                 <h3 className="font-serif text-xl font-bold text-white">Augusta Rainha</h3>
-                <p className="text-white/90 text-sm font-medium">Artigos Religiosos Católico</p>
+                <p className="text-white text-sm font-medium">Artigos Religiosos Católico</p>
               </div>
             </div>
             
-            <p className="text-white/90 mb-6 leading-relaxed max-w-md font-medium">
+            <p className="text-white mb-6 leading-relaxed max-w-md font-medium">
               Mais que artigos, instrumentos de oração, onde a Fé se torna inspiração! 
               Servindo a comunidade católica com amor e dedicação em Paulínia/SP.
             </p>
@@ -79,7 +79,7 @@ const Footer = () => {
                 <li key={link.href}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-white/90 hover:text-accent transition-colors text-sm font-medium hover:font-semibold"
+                    className="text-white hover:text-accent transition-colors text-sm font-medium hover:font-semibold"
                   >
                     {link.label}
                   </button>
@@ -97,7 +97,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="text-accent mt-1 flex-shrink-0" size={16} />
-                <div className="text-sm text-white/90 font-medium">
+                <div className="text-sm text-white font-medium">
                   <p>Av. Pedro Antonio Bordignon, 494</p>
                   <p>Bairro São José 1 - Galeria Arcanjo</p>
                   <p>Paulínia / SP</p>
@@ -108,7 +108,7 @@ const Footer = () => {
                 <Phone className="text-accent flex-shrink-0" size={16} />
                 <button
                   onClick={() => window.open('tel:+5519971476970')}
-                  className="text-sm text-white/90 hover:text-accent transition-colors font-medium"
+                  className="text-sm text-white hover:text-accent transition-colors font-medium"
                 >
                   (19) 97147-6970
                 </button>
@@ -118,7 +118,7 @@ const Footer = () => {
                 <Mail className="text-accent flex-shrink-0" size={16} />
                 <button
                   onClick={handleEmail}
-                  className="text-sm text-white/90 hover:text-accent transition-colors break-all font-medium"
+                  className="text-sm text-white hover:text-accent transition-colors break-all font-medium"
                 >
                   artigosreligiososaugustarainha@gmail.com
                 </button>
@@ -128,7 +128,7 @@ const Footer = () => {
                 <Instagram className="text-accent flex-shrink-0" size={16} />
                 <button
                   onClick={handleInstagram}
-                  className="text-sm text-white/90 hover:text-accent transition-colors font-medium"
+                  className="text-sm text-white hover:text-accent transition-colors font-medium"
                 >
                   @artigosaugustarainha
                 </button>
@@ -139,14 +139,14 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar - enhanced visibility */}
-      <div className="border-t border-white/30">
+      <div className="border-t border-white/20">
         <div className="container py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-sm text-white/90 font-medium">
+              <p className="text-sm text-white font-medium">
                 © 2024 Augusta Rainha Artigos Religiosos Católico. Todos os direitos reservados.
               </p>
-              <p className="text-xs text-white/70 mt-1 font-medium">
+              <p className="text-xs text-white/80 mt-1 font-medium">
                 Desenvolvido com <Heart size={12} className="inline text-accent" /> para servir a comunidade católica
               </p>
             </div>
