@@ -26,7 +26,7 @@ const HeroSection = () => {
   return (
     <section 
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20"
       style={{
         backgroundImage: `url('/lovable-uploads/928163ad-3011-4700-9d10-56627a8655ac.png')`,
         backgroundSize: 'cover',
