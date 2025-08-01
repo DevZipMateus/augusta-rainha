@@ -53,7 +53,10 @@ const AboutSection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-2">
               <video
                 className="w-full h-auto rounded-xl"
-                controls
+                autoPlay
+                loop
+                muted
+                playsInline
                 poster="/lovable-uploads/a3bb7af3-129c-49c5-a730-fd70feb5e8f1.png"
               >
                 <source src="/lovable-uploads/augusta.mp4" type="video/mp4" />
