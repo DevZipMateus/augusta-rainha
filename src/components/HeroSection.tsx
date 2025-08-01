@@ -55,92 +55,83 @@ const HeroSection = () => {
 
       <div className="container px-4 sm:px-6 lg:px-8 text-center z-30 relative">
         <div className="max-w-4xl mx-auto animate-on-scroll opacity-100 translate-y-0">
-          {/* Logo - responsive sizing */}
-          <div className="mb-6 sm:mb-8">
-            <img
-              src="/lovable-uploads/a3bb7af3-129c-49c5-a730-fd70feb5e8f1.png"
-              alt="Augusta Rainha Artigos Religiosos Católico"
-              className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto mx-auto mb-4 sm:mb-6"
-            />
-          </div>
-
-          {/* Main heading - responsive typography */}
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2" 
+          {/* Main heading - responsive typography with better mobile spacing */}
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2" 
               style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
             Augusta Rainha
-            <span className="block text-primary mt-1 sm:mt-2" 
+            <span className="block text-primary mt-2 sm:mt-3" 
                   style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
               Artigos Religiosos
             </span>
           </h1>
 
-          {/* Slogan - responsive sizing */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white mb-6 sm:mb-8 font-medium px-4" 
+          {/* Slogan - responsive sizing with better mobile readability */}
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white mb-8 sm:mb-10 font-medium px-4 leading-relaxed" 
              style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
             Mais que artigos, instrumentos de oração,
-            <span className="block text-accent font-semibold mt-1" 
+            <span className="block text-accent font-semibold mt-2" 
                   style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
               onde a Fé se torna inspiração!
             </span>
           </p>
 
-          {/* Description - responsive text */}
-          <p className="text-sm sm:text-base lg:text-lg text-white mb-8 sm:mb-10 lg:mb-12 max-w-2xl mx-auto leading-relaxed px-4" 
+          {/* Description - responsive text with better mobile spacing */}
+          <p className="text-base sm:text-lg lg:text-xl text-white mb-10 sm:mb-12 lg:mb-14 max-w-3xl mx-auto leading-relaxed px-4" 
              style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
             Livros, Bíblias, imagens de santos, terços, vestuário religioso e muito mais. 
             Um espaço de bênçãos em Paulinia/SP.
           </p>
 
-          {/* CTA Buttons - responsive layout */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-14 lg:mb-16 px-4">
+          {/* CTA Buttons - improved mobile layout */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-14 sm:mb-16 lg:mb-20 px-4">
             <Button
               onClick={handleWhatsApp}
               size="lg"
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-h-[56px]"
             >
-              <Heart className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+              <Heart className="mr-2 w-5 h-5" />
               Conheça Nossos Artigos
-              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             
             <Button
               onClick={() => scrollToSection('sobre')}
               variant="outline"
               size="lg"
-              className="w-full sm:w-auto text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full border-2 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300 backdrop-blur-sm"
+              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full border-2 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300 backdrop-blur-sm min-h-[56px]"
             >
               Nossa História
             </Button>
           </div>
 
-          {/* Features - responsive grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <Book className="text-primary mx-auto mb-3 sm:mb-4 w-10 h-10 sm:w-12 sm:h-12" />
-              <h3 className="font-serif text-lg sm:text-xl font-semibold text-secondary mb-2">
+          {/* Features - responsive grid with improved mobile layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 max-w-5xl mx-auto">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <Book className="text-primary mx-auto mb-4 w-12 h-12 sm:w-14 sm:h-14" />
+              <h3 className="font-serif text-xl sm:text-2xl font-semibold text-secondary mb-3">
                 Livros & Bíblias
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Seleção especial de livros religiosos e Bíblias para fortalecer sua fé
               </p>
             </div>
 
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-              <Cross className="text-accent mx-auto mb-3 sm:mb-4 w-10 h-10 sm:w-12 sm:h-12" />
-              <h3 className="font-serif text-lg sm:text-xl font-semibold text-secondary mb-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <Cross className="text-accent mx-auto mb-4 w-12 h-12 sm:w-14 sm:h-14" />
+              <h3 className="font-serif text-xl sm:text-2xl font-semibold text-secondary mb-3">
                 Imagens de Santos
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Belas imagens e estátuas dos santos para sua devoção diária
               </p>
             </div>
 
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
-              <Heart className="text-primary mx-auto mb-3 sm:mb-4 w-10 h-10 sm:w-12 sm:h-12" />
-              <h3 className="font-serif text-lg sm:text-xl font-semibold text-secondary mb-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
+              <Heart className="text-primary mx-auto mb-4 w-12 h-12 sm:w-14 sm:h-14" />
+              <h3 className="font-serif text-xl sm:text-2xl font-semibold text-secondary mb-3">
                 Artigos Diversos
               </h3>
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Terços, pulseiras, velas, incensos e muito mais para sua oração
               </p>
             </div>

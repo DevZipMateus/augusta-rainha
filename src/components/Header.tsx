@@ -49,23 +49,23 @@ const Header = () => {
     >
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo - responsive sizing */}
+          {/* Logo - improved responsive sizing */}
           <div 
-            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer"
+            className="flex items-center space-x-2 sm:space-x-3 cursor-pointer flex-shrink-0"
             onClick={() => scrollToSection('inicio')}
           >
             <img
               src="/lovable-uploads/a3bb7af3-129c-49c5-a730-fd70feb5e8f1.png"
               alt="Augusta Rainha Artigos Religiosos Católico"
-              className="h-8 sm:h-10 md:h-12 w-auto"
+              className="h-10 sm:h-12 md:h-14 w-auto"
             />
-            <div className="hidden xs:block">
-              <h1 className={`font-serif font-semibold text-base sm:text-lg md:text-xl ${
+            <div className="hidden sm:block">
+              <h1 className={`font-serif font-semibold text-lg sm:text-xl md:text-2xl leading-tight ${
                 isScrolled ? 'text-secondary' : 'text-white'
               }`}>
                 Augusta Rainha
               </h1>
-              <p className={`text-xs sm:text-sm ${
+              <p className={`text-sm sm:text-base ${
                 isScrolled ? 'text-muted-foreground' : 'text-white/80'
               }`}>
                 Artigos Religiosos
@@ -73,13 +73,13 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          {/* Desktop Navigation - improved spacing */}
+          <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-base font-medium transition-colors hover:text-primary relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
                   isScrolled ? 'text-foreground' : 'text-white hover:text-primary'
                 }`}
               >
@@ -88,44 +88,45 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button - hidden on small screens */}
-          <div className="hidden lg:block">
+          {/* CTA Button - improved responsive behavior */}
+          <div className="hidden lg:block flex-shrink-0">
             <Button
               onClick={() => scrollToSection('contato')}
-              className="bg-primary hover:bg-primary/90 text-white text-sm px-4 py-2"
-              size="sm"
+              className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+              size="default"
             >
               Entre em Contato
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - improved touch target */}
           <Button
             variant="ghost"
             size="icon"
-            className={`lg:hidden ${isScrolled ? 'text-foreground' : 'text-white'}`}
+            className={`lg:hidden p-3 ${isScrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 
-        {/* Mobile Menu - improved responsiveness */}
+        {/* Mobile Menu - enhanced mobile experience */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm border-t shadow-lg">
-            <nav className="flex flex-col space-y-1 p-4 sm:p-6">
-              {navItems.map((item) => (
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-md border-t shadow-2xl">
+            <nav className="flex flex-col p-6">
+              {navItems.map((item, index) => (
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left text-foreground hover:text-primary transition-colors py-3 px-2 text-base"
+                  className="text-left text-foreground hover:text-primary transition-colors py-4 px-2 text-lg font-medium border-b border-gray-100 last:border-b-0"
+                  style={{ animationDelay: `${index * 50}ms` }}
                 >
                   {item.label}
                 </button>
               ))}
               <Button
                 onClick={() => scrollToSection('contato')}
-                className="bg-primary hover:bg-primary/90 text-white mt-4 w-full"
+                className="bg-primary hover:bg-primary/90 text-white mt-6 w-full py-4 text-lg rounded-full"
                 size="lg"
               >
                 Entre em Contato
