@@ -48,28 +48,42 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Mission Card */}
+          {/* Video */}
           <div className="animate-on-scroll">
-            <Card className="bg-gradient-to-br from-white to-primary/5 border-2 border-primary/20 p-8 shadow-xl">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary rounded-full mb-6">
-                  <Star className="text-white" size={40} />
-                </div>
-                <h3 className="font-serif text-2xl font-bold text-secondary mb-4">
-                  Nossa Missão
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  Buscamos, em cada produto, levar a mensagem de esperança e as maravilhas de Deus, 
-                  honrando a dignidade e a graça que o nome <strong className="text-accent">Augusta Rainha</strong> representa.
-                </p>
-                <div className="bg-accent/10 rounded-xl p-4">
-                  <p className="text-accent font-semibold text-lg">
-                    Mais do que um comércio, este é um espaço de bênçãos
-                  </p>
-                </div>
-              </div>
-            </Card>
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/10 to-secondary/10 p-2">
+              <video
+                className="w-full h-auto rounded-xl"
+                controls
+                poster="/lovable-uploads/a3bb7af3-129c-49c5-a730-fd70feb5e8f1.png"
+              >
+                <source src="/lovable-uploads/augusta.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+            </div>
           </div>
+        </div>
+
+        {/* Mission Card - Moved below the video/story section */}
+        <div className="animate-on-scroll mb-16">
+          <Card className="bg-gradient-to-br from-white to-primary/5 border-2 border-primary/20 p-8 shadow-xl max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary rounded-full mb-6">
+                <Star className="text-white" size={40} />
+              </div>
+              <h3 className="font-serif text-2xl font-bold text-secondary mb-4">
+                Nossa Missão
+              </h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Buscamos, em cada produto, levar a mensagem de esperança e as maravilhas de Deus, 
+                honrando a dignidade e a graça que o nome <strong className="text-accent">Augusta Rainha</strong> representa.
+              </p>
+              <div className="bg-accent/10 rounded-xl p-4">
+                <p className="text-accent font-semibold text-lg">
+                  Mais do que um comércio, este é um espaço de bênçãos
+                </p>
+              </div>
+            </div>
+          </Card>
         </div>
 
         {/* Values */}
