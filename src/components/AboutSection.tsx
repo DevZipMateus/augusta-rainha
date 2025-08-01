@@ -1,84 +1,128 @@
 
 import { Card } from "@/components/ui/card";
-import { Users, Target, Heart, Award } from "lucide-react";
+import { Heart, Star, Users, Award } from "lucide-react";
 
-export default function AboutSection() {
-  const values = [
-    {
-      icon: Target,
-      title: "Foco no Resultado",
-      description: "Nossos workshops são práticos e focados em gerar resultados reais para seu negócio"
-    },
-    {
-      icon: Heart,
-      title: "Comprometimento",
-      description: "Estamos comprometidos com o sucesso de cada microempreendedor de Santa Maria"
-    },
-    {
-      icon: Users,
-      title: "Comunidade",
-      description: "Criamos uma rede de apoio entre empreendedores locais para crescermos juntos"
-    },
-    {
-      icon: Award,
-      title: "Excelência",
-      description: "Oferecemos conteúdo de alta qualidade com instrutores experientes e qualificados"
-    }
-  ];
-
+const AboutSection = () => {
   return (
-    <section id="about" className="relative z-10 py-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-cyan-300/30 mb-6">
-            <Heart className="w-4 h-4 mr-2 text-cyan-300" />
-            <span className="text-sm font-medium text-white/90">Nossa História</span>
+    <section id="sobre" className="section-padding bg-gradient-to-b from-white to-primary/5">
+      <div className="container">
+        <div className="text-center mb-16 animate-on-scroll">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
+            <Heart className="text-primary" size={32} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sobre a
-            <span className="block bg-gradient-to-r from-cyan-300 to-green-300 bg-clip-text text-transparent">
-              Impulso Empreendedor
-            </span>
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-secondary mb-4">
+            Nossa História
           </h2>
+          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Uma jornada de fé que transformou experiência corporativa em missão divina
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* About Text */}
-          <div className="space-y-6">
-            <p className="text-lg text-white/80 leading-relaxed">
-              A <strong className="text-cyan-300">Impulso Empreendedor</strong> nasceu da paixão por desenvolver o ecossistema empreendedor de Santa Maria. Sabemos que o microempreendedor brasileiro enfrenta desafios únicos e precisa de soluções práticas.
-            </p>
-            <p className="text-lg text-white/80 leading-relaxed">
-              Nossa missão é <strong className="text-green-300">democratizar o conhecimento empresarial</strong>, oferecendo workshops de alta qualidade com preços acessíveis, focados na realidade do pequeno negócio local.
-            </p>
-            <p className="text-lg text-white/80 leading-relaxed">
-              Já capacitamos mais de 500 empreendedores e vemos diariamente negócios se transformando, crescendo e gerando mais empregos em nossa região.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Story Content */}
+          <div className="animate-on-scroll">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Após dedicar <strong className="text-secondary">28 anos</strong> da minha vida ao mundo corporativo como 
+                Coordenador de Desenvolvimento de Lojas, senti um chamado para uma nova jornada.
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Com a saída da empresa, em oração, busquei a Deus por um direcionamento, pedindo 
+                que me mostrasse como poderia usar minha experiência para <strong className="text-accent">servi-lo 
+                e tocar a vida das pessoas</strong>.
+              </p>
+              
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Foi Ele quem, em sua infinita sabedoria, me guiou para um caminho surpreendente: 
+                <strong className="text-primary"> abrir uma loja de artigos religiosos</strong>.
+              </p>
+
+              <div className="bg-primary/10 rounded-2xl p-6 border-l-4 border-primary">
+                <p className="text-secondary font-medium text-lg italic">
+                  "Nossa missão é ser um canal de bênçãos e inspiração, oferecendo artigos religiosos 
+                  que fortaleçam a fé e a devoção."
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Mission Image */}
-          <Card className="bg-white/10 backdrop-blur-sm border-cyan-300/20 p-8 text-center">
-            <Users className="w-16 h-16 text-cyan-300 mx-auto mb-6" />
-            <h3 className="text-2xl font-bold text-white mb-4">Nossa Missão</h3>
-            <p className="text-white/80">
-              Capacitar microempreendedores com conhecimento prático e acessível, 
-              impulsionando o desenvolvimento econômico local de Santa Maria.
-            </p>
-          </Card>
+          {/* Mission Card */}
+          <div className="animate-on-scroll">
+            <Card className="bg-gradient-to-br from-white to-primary/5 border-2 border-primary/20 p-8 shadow-xl">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-primary rounded-full mb-6">
+                  <Star className="text-white" size={40} />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-secondary mb-4">
+                  Nossa Missão
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Buscamos, em cada produto, levar a mensagem de esperança e as maravilhas de Deus, 
+                  honrando a dignidade e a graça que o nome <strong className="text-accent">Augusta Rainha</strong> representa.
+                </p>
+                <div className="bg-accent/10 rounded-xl p-4">
+                  <p className="text-accent font-semibold text-lg">
+                    Mais do que um comércio, este é um espaço de bênçãos
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
         </div>
 
         {/* Values */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {values.map((value, index) => (
-            <Card key={index} className="bg-white/10 backdrop-blur-sm border-cyan-300/20 p-6 text-center hover:bg-white/15 transition-all duration-300 hover:scale-105">
-              <value.icon className="w-12 h-12 text-cyan-300 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-3">{value.title}</h3>
-              <p className="text-white/70 text-sm">{value.description}</p>
+        <div className="animate-on-scroll">
+          <h3 className="font-serif text-2xl md:text-3xl font-bold text-center text-secondary mb-12">
+            Nossos Valores
+          </h3>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center p-6 bg-white border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <Heart className="text-primary" size={32} />
+              </div>
+              <h4 className="font-serif font-semibold text-secondary mb-2">Fé</h4>
+              <p className="text-muted-foreground text-sm">
+                Cada produto é escolhido com amor e oração
+              </p>
             </Card>
-          ))}
+
+            <Card className="text-center p-6 bg-white border-2 border-accent/10 hover:border-accent/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
+                <Star className="text-accent" size={32} />
+              </div>
+              <h4 className="font-serif font-semibold text-secondary mb-2">Qualidade</h4>
+              <p className="text-muted-foreground text-sm">
+                Artigos de excelência para sua devoção
+              </p>
+            </Card>
+
+            <Card className="text-center p-6 bg-white border-2 border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
+                <Users className="text-primary" size={32} />
+              </div>
+              <h4 className="font-serif font-semibold text-secondary mb-2">Comunidade</h4>
+              <p className="text-muted-foreground text-sm">
+                Servindo a comunidade católica com dedicação
+              </p>
+            </Card>
+
+            <Card className="text-center p-6 bg-white border-2 border-accent/10 hover:border-accent/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4">
+                <Award className="text-accent" size={32} />
+              </div>
+              <h4 className="font-serif font-semibold text-secondary mb-2">Excelência</h4>
+              <p className="text-muted-foreground text-sm">
+                Compromisso com o melhor atendimento
+              </p>
+            </Card>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default AboutSection;

@@ -1,14 +1,22 @@
+
+User-agent: *
+Allow: /
+
+# Permitir todos os bots de busca
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: Slurp
 Allow: /
 
-User-agent: facebookexternalhit
-Allow: /
+# Bloquear caminhos administrativos (se existirem no futuro)
+Disallow: /admin/
+Disallow: /login/
+Disallow: /api/
+Disallow: /*.pdf$
 
-User-agent: *
-Allow: /
+# Sitemap
+Sitemap: https://augustarainha.com.br/sitemap.xml
