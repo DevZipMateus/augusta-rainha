@@ -26,7 +26,7 @@ const HeroSection = () => {
   return (
     <section 
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900"
       style={{
         backgroundImage: `url('/lovable-uploads/928163ad-3011-4700-9d10-56627a8655ac.png')`,
         backgroundSize: 'cover',
@@ -34,27 +34,27 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      {/* Reduced dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30 z-10"></div>
 
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none z-20">
-        <div className="absolute top-20 left-10 text-white/30">
+        <div className="absolute top-20 left-10 text-white/40">
           <Cross size={40} />
         </div>
-        <div className="absolute top-40 right-20 text-white/20">
+        <div className="absolute top-40 right-20 text-white/30">
           <Heart size={32} />
         </div>
-        <div className="absolute bottom-32 left-20 text-white/30">
+        <div className="absolute bottom-32 left-20 text-white/40">
           <Book size={36} />
         </div>
-        <div className="absolute bottom-20 right-16 text-white/20">
+        <div className="absolute bottom-20 right-16 text-white/30">
           <Cross size={28} />
         </div>
       </div>
 
-      <div className="container text-center z-30">
-        <div className="max-w-4xl mx-auto animate-on-scroll">
+      <div className="container text-center z-30 relative">
+        <div className="max-w-4xl mx-auto animate-on-scroll opacity-100 translate-y-0">
           {/* Logo */}
           <div className="mb-8">
             <img
@@ -64,22 +64,29 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Main heading */}
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+          {/* Main heading with enhanced contrast */}
+          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" 
+              style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
             Augusta Rainha
-            <span className="block text-primary drop-shadow-lg">Artigos Religiosos</span>
+            <span className="block text-primary" 
+                  style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6)' }}>
+              Artigos Religiosos
+            </span>
           </h1>
 
-          {/* Slogan */}
-          <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium drop-shadow-md">
+          {/* Slogan with enhanced visibility */}
+          <p className="text-xl md:text-2xl text-white mb-8 font-medium" 
+             style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
             Mais que artigos, instrumentos de oração,
-            <span className="block text-accent font-semibold drop-shadow-md">
+            <span className="block text-accent font-semibold" 
+                  style={{ textShadow: '1px 1px 6px rgba(0,0,0,0.8)' }}>
               onde a Fé se torna inspiração!
             </span>
           </p>
 
-          {/* Description */}
-          <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+          {/* Description with better contrast */}
+          <p className="text-lg text-white mb-12 max-w-2xl mx-auto leading-relaxed" 
+             style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.8)' }}>
             Livros, Bíblias, imagens de santos, terços, vestuário religioso e muito mais. 
             Um espaço de bênçãos em Paulinia/SP.
           </p>
@@ -100,15 +107,15 @@ const HeroSection = () => {
               onClick={() => scrollToSection('sobre')}
               variant="outline"
               size="lg"
-              className="text-lg px-8 py-6 rounded-full border-2 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300"
+              className="text-lg px-8 py-6 rounded-full border-2 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300 backdrop-blur-sm"
             >
               Nossa História
             </Button>
           </div>
 
-          {/* Features */}
+          {/* Features with improved backdrop */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <Book className="text-primary mx-auto mb-4" size={48} />
               <h3 className="font-serif text-xl font-semibold text-secondary mb-2">
                 Livros & Bíblias
@@ -118,7 +125,7 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <Cross className="text-accent mx-auto mb-4" size={48} />
               <h3 className="font-serif text-xl font-semibold text-secondary mb-2">
                 Imagens de Santos
@@ -128,7 +135,7 @@ const HeroSection = () => {
               </p>
             </div>
 
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <Heart className="text-primary mx-auto mb-4" size={48} />
               <h3 className="font-serif text-xl font-semibold text-secondary mb-2">
                 Artigos Diversos
