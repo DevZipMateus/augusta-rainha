@@ -1,6 +1,7 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, MessageCircle } from "lucide-react";
 
 const ProductGallerySection = () => {
   // Lista das imagens na galeria com seus nomes
@@ -19,6 +20,13 @@ const ProductGallerySection = () => {
     { filename: "vela votiva.jpg", title: "Vela Votiva" },
     { filename: "veus cons.jpg", title: "Véus" }
   ];
+
+  const handleProductWhatsApp = (productTitle: string) => {
+    const message = `Olá! Gostaria de saber mais sobre ${productTitle} na Augusta Rainha.`;
+    const phone = "5519971476970";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
 
   const handleWhatsApp = () => {
     const message = "Olá! Gostaria de ver todos os modelos disponíveis na Augusta Rainha.";
@@ -57,10 +65,19 @@ const ProductGallerySection = () => {
                   loading="lazy"
                 />
               </div>
-              <CardContent className="p-4">
+              <CardContent className="p-4 space-y-3">
                 <h3 className="font-serif text-lg font-semibold text-secondary text-center leading-tight">
                   {image.title}
                 </h3>
+                <Button
+                  onClick={() => handleProductWhatsApp(image.title)}
+                  variant="outline"
+                  size="sm"
+                  className="w-full bg-green-50 hover:bg-green-100 text-green-700 border-green-200 hover:border-green-300 transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                  Ver no WhatsApp
+                </Button>
               </CardContent>
             </Card>
           ))}
