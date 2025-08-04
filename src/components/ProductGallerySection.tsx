@@ -1,5 +1,5 @@
-
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { ShoppingBag } from "lucide-react";
 
 const ProductGallerySection = () => {
@@ -19,6 +19,13 @@ const ProductGallerySection = () => {
     { filename: "vela votiva.jpg", title: "Vela Votiva" },
     { filename: "veus cons.jpg", title: "Véus" }
   ];
+
+  const handleWhatsApp = () => {
+    const message = "Olá! Gostaria de ver todos os modelos disponíveis na Augusta Rainha.";
+    const phone = "5519971476970";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
 
   return (
     <section id="produtos" className="section-padding bg-gradient-to-b from-white to-primary/5">
@@ -63,6 +70,13 @@ const ProductGallerySection = () => {
           <p className="text-muted-foreground mb-6">
             Esta é apenas uma pequena amostra dos nossos produtos. Temos muito mais disponível em nossa loja!
           </p>
+          <Button
+            onClick={handleWhatsApp}
+            size="lg"
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold"
+          >
+            Veja todos os modelos
+          </Button>
         </div>
       </div>
     </section>
