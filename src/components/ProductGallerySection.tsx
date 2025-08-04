@@ -76,7 +76,7 @@ const ProductGallerySection = () => {
                   className="w-full bg-green-50 hover:bg-green-100 text-green-700 border-green-200 hover:border-green-300 transition-colors"
                 >
                   <MessageCircle className="w-4 h-4 mr-2" />
-                  Ver no WhatsApp
+                  Veja todos os modelos
                 </Button>
               </CardContent>
             </Card>
