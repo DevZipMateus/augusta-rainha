@@ -154,30 +154,6 @@ const ProductGallerySection = () => {
           </div>
         </div>
 
-        {/* Grid de produtos menor */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4 mb-12">
-          {galleryImages.slice(0, 6).map((image, index) => (
-            <Card 
-              key={index}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-on-scroll border-primary/20"
-            >
-              <div className="aspect-[3/4] overflow-hidden bg-gray-50 flex items-center justify-center">
-                <img
-                  src={`/lovable-uploads/galeria/${image.filename}`}
-                  alt={image.title}
-                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2"
-                  loading="lazy"
-                />
-              </div>
-              <CardContent className="p-2 md:p-3">
-                <h3 className="font-serif text-xs md:text-sm font-semibold text-secondary text-center leading-tight min-h-[2rem] md:min-h-[2.5rem] flex items-center justify-center">
-                  {image.title}
-                </h3>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
         <div className="text-center animate-on-scroll">
           <p className="text-muted-foreground mb-6">
             Esta é apenas uma pequena amostra dos nossos produtos. Temos muito mais disponível em nossa loja!
