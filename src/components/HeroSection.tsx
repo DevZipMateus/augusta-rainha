@@ -1,41 +1,31 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Book, Cross } from "lucide-react";
-
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       const headerHeight = 80;
       const elementPosition = element.offsetTop - headerHeight;
-      
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
       });
     }
   };
-
   const handleWhatsApp = () => {
     const message = "Olá! Gostaria de conhecer os artigos religiosos da Augusta Rainha.";
     const phone = "5519971476970";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
-
-  return (
-    <section 
-      id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20"
-      style={{
-        backgroundImage: `url('/lovable-uploads/af34a233-67c2-4605-8404-fcbdd0926b59.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20" style={{
+    backgroundImage: `url('/lovable-uploads/af34a233-67c2-4605-8404-fcbdd0926b59.png')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}>
       {/* Much stronger dark overlay for maximum text readability */}
-      <div className="absolute inset-0 bg-black/75 z-10"></div>
+      <div className="absolute inset-0 z-10 bg-transparent"></div>
 
       {/* Background decorative elements - responsive positioning */}
       <div className="absolute inset-0 pointer-events-none z-20">
@@ -56,73 +46,57 @@ const HeroSection = () => {
       <div className="container px-4 sm:px-6 lg:px-8 text-center z-30 relative">
         <div className="max-w-4xl mx-auto animate-on-scroll opacity-100 translate-y-0">
           {/* Main heading - maximum contrast and readability */}
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2" 
-              style={{ 
-                textShadow: '4px 4px 16px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,1), 2px 2px 8px rgba(0,0,0,1), -2px -2px 8px rgba(0,0,0,0.8)',
-                filter: 'drop-shadow(0 0 10px rgba(0,0,0,1))'
-              }}>
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight px-2" style={{
+          textShadow: '4px 4px 16px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,1), 2px 2px 8px rgba(0,0,0,1), -2px -2px 8px rgba(0,0,0,0.8)',
+          filter: 'drop-shadow(0 0 10px rgba(0,0,0,1))'
+        }}>
             Augusta Rainha
-            <span className="block text-primary mt-2 sm:mt-3" 
-                  style={{ 
-                    textShadow: '4px 4px 16px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,1), 2px 2px 8px rgba(0,0,0,1), -2px -2px 8px rgba(0,0,0,0.8)',
-                    filter: 'drop-shadow(0 0 10px rgba(0,0,0,1))'
-                  }}>
+            <span className="block text-primary mt-2 sm:mt-3" style={{
+            textShadow: '4px 4px 16px rgba(0,0,0,1), 0 0 40px rgba(0,0,0,1), 2px 2px 8px rgba(0,0,0,1), -2px -2px 8px rgba(0,0,0,0.8)',
+            filter: 'drop-shadow(0 0 10px rgba(0,0,0,1))'
+          }}>
               Artigos Religiosos
             </span>
           </h1>
 
           {/* Slogan - maximum contrast and visibility */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white mb-8 sm:mb-10 font-medium px-4 leading-relaxed" 
-             style={{ 
-               textShadow: '3px 3px 12px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 2px 2px 6px rgba(0,0,0,1), -2px -2px 6px rgba(0,0,0,0.8)',
-               filter: 'drop-shadow(0 0 8px rgba(0,0,0,1))'
-             }}>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white mb-8 sm:mb-10 font-medium px-4 leading-relaxed" style={{
+          textShadow: '3px 3px 12px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 2px 2px 6px rgba(0,0,0,1), -2px -2px 6px rgba(0,0,0,0.8)',
+          filter: 'drop-shadow(0 0 8px rgba(0,0,0,1))'
+        }}>
             Mais que artigos, instrumentos de oração,
-            <span className="block text-accent font-semibold mt-2" 
-                  style={{ 
-                    textShadow: '3px 3px 12px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 2px 2px 6px rgba(0,0,0,1), -2px -2px 6px rgba(0,0,0,0.8)',
-                    filter: 'drop-shadow(0 0 8px rgba(0,0,0,1))'
-                  }}>
+            <span className="block text-accent font-semibold mt-2" style={{
+            textShadow: '3px 3px 12px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 2px 2px 6px rgba(0,0,0,1), -2px -2px 6px rgba(0,0,0,0.8)',
+            filter: 'drop-shadow(0 0 8px rgba(0,0,0,1))'
+          }}>
               onde a Fé se torna inspiração!
             </span>
           </p>
 
           {/* Description - enhanced contrast */}
-          <p className="text-base sm:text-lg lg:text-xl text-white mb-10 sm:mb-12 lg:mb-14 max-w-3xl mx-auto leading-relaxed px-4" 
-             style={{ 
-               textShadow: '2px 2px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,1), 1px 1px 4px rgba(0,0,0,1), -1px -1px 4px rgba(0,0,0,0.8)',
-               filter: 'drop-shadow(0 0 6px rgba(0,0,0,1))'
-             }}>
+          <p className="text-base sm:text-lg lg:text-xl text-white mb-10 sm:mb-12 lg:mb-14 max-w-3xl mx-auto leading-relaxed px-4" style={{
+          textShadow: '2px 2px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,1), 1px 1px 4px rgba(0,0,0,1), -1px -1px 4px rgba(0,0,0,0.8)',
+          filter: 'drop-shadow(0 0 6px rgba(0,0,0,1))'
+        }}>
             Livros, Bíblias, imagens de santos, terços, vestuário religioso e muito mais. 
             Um espaço de bênçãos em Paulinia/SP.
           </p>
 
           {/* CTA Buttons - enhanced visibility with solid backgrounds */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-14 sm:mb-16 lg:mb-20 px-4">
-            <Button
-              onClick={handleWhatsApp}
-              size="lg"
-              className="w-full sm:w-auto bg-primary hover:bg-primary/80 text-white text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 min-h-[56px] font-semibold border-2 border-white/20"
-              style={{
-                textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.5), 0 10px 20px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.2)'
-              }}
-            >
+            <Button onClick={handleWhatsApp} size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/80 text-white text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 min-h-[56px] font-semibold border-2 border-white/20" style={{
+            textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.5), 0 10px 20px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.2)'
+          }}>
               <Heart className="mr-2 w-5 h-5" />
               Conheça Nossos Artigos
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             
-            <Button
-              onClick={() => scrollToSection('sobre')}
-              variant="outline"
-              size="lg"
-              className="w-full sm:w-auto text-lg px-8 py-6 rounded-full border-3 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300 backdrop-blur-sm min-h-[56px] font-semibold shadow-2xl bg-black/50"
-              style={{
-                textShadow: '1px 1px 3px rgba(0,0,0,1)',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.5), 0 10px 20px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.1)'
-              }}
-            >
+            <Button onClick={() => scrollToSection('sobre')} variant="outline" size="lg" className="w-full sm:w-auto text-lg px-8 py-6 rounded-full border-3 border-white text-white hover:bg-white hover:text-secondary transition-all duration-300 backdrop-blur-sm min-h-[56px] font-semibold shadow-2xl bg-black/50" style={{
+            textShadow: '1px 1px 3px rgba(0,0,0,1)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.5), 0 10px 20px rgba(0,0,0,0.3), inset 0 1px 2px rgba(255,255,255,0.1)'
+          }}>
               Nossa História
             </Button>
           </div>
@@ -161,8 +135,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
