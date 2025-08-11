@@ -145,7 +145,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-sm text-white font-medium">
-                © 2024 Augusta Rainha Artigos Religiosos Católico. Todos os direitos reservados.
+                © 2025 Augusta Rainha Artigos Religiosos Católico. Todos os direitos reservados.
               </p>
               <p className="text-xs text-white/80 mt-1 font-medium">
                 Desenvolvido com <Heart size={12} className="inline text-accent" /> para servir a comunidade católica
