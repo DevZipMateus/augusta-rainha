@@ -65,12 +65,17 @@ const HeroSection = () => {
           filter: 'drop-shadow(0 0 8px rgba(0,0,0,1))'
         }}>
             Mais que artigos, instrumentos de oração,
-            <span className="block text-accent font-semibold mt-2" style={{
-            textShadow: '3px 3px 12px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 2px 2px 6px rgba(0,0,0,1), -2px -2px 6px rgba(0,0,0,0.8)',
-            filter: 'drop-shadow(0 0 8px rgba(0,0,0,1))'
-          }}>
-              onde a Fé se torna inspiração!
-            </span>
+            <span
+  className="block text-accent font-semibold mt-2"
+  style={{
+    color: 'white',
+    textShadow: '3px 3px 12px rgba(0,0,0,1), 0 0 30px rgba(0,0,0,1), 2px 2px 6px rgba(0,0,0,1), -2px -2px 6px rgba(0,0,0,0.8)',
+    filter: 'drop-shadow(0 0 8px rgba(0,0,0,1))'
+  }}
+>
+  onde a Fé se torna inspiração!
+</span>
+
           </p>
 
           {/* Description - enhanced contrast */}
