@@ -10,7 +10,7 @@ const ProductGallerySection = () => {
   const [api, setApi] = useState<any>();
   const [current, setCurrent] = useState(0);
 
-  // Lista das imagens na galeria com seus nomes
+  // Lista completa das imagens na galeria
   const galleryImages = [
     { filename: "bones com diversas estampas.jpg", title: "Bonés com Diversas Estampas" },
     { filename: "camisetas com diversas estampas.jpg", title: "Camisetas com Diversas Estampas" },
@@ -24,7 +24,31 @@ const ProductGallerySection = () => {
     { filename: "terço.jpg", title: "Terço" },
     { filename: "vela quaresma.jpg", title: "Vela Quaresma" },
     { filename: "vela votiva.jpg", title: "Vela Votiva" },
-    { filename: "veus cons.jpg", title: "Véus" }
+    { filename: "veus cons.jpg", title: "Véus" },
+    { filename: "Deixa a mãe descansar.png", title: "Deixa a Mãe Descansar" },
+    { filename: "NSA Aparecida .png", title: "Nossa Senhora Aparecida" },
+    { filename: "NSA Aparecida Pérola Branca Rosa.png", title: "Nossa Senhora Aparecida Pérola Branca Rosa" },
+    { filename: "NSA Desatadora dos nós.png", title: "Nossa Senhora Desatadora dos Nós" },
+    { filename: "NSA Fátima.png", title: "Nossa Senhora de Fátima" },
+    { filename: "NSA Imaculado Coração de Maria.png", title: "Nossa Senhora do Imaculado Coração de Maria" },
+    { filename: "NSA das Graças.png", title: "Nossa Senhora das Graças" },
+    { filename: "NSA das Lágrimas.png", title: "Nossa Senhora das Lágrimas" },
+    { filename: "Padre Pio.png", title: "Padre Pio" },
+    { filename: "Sagrada Familia.png", title: "Sagrada Família" },
+    { filename: "Sagrado Coração Jesus.png", title: "Sagrado Coração de Jesus" },
+    { filename: "Santa Terezinha.png", title: "Santa Terezinha" },
+    { filename: "São Bento.png", title: "São Bento" },
+    { filename: "São Francisco de Assis.png", title: "São Francisco de Assis" },
+    { filename: "São Gabriel.png", title: "São Gabriel" },
+    { filename: "São José Afetuoso.png", title: "São José Afetuoso" },
+    { filename: "São José Dormindo.png", title: "São José Dormindo" },
+    { filename: "São José Operário.png", title: "São José Operário" },
+    { filename: "São José Sentado.png", title: "São José Sentado" },
+    { filename: "São José.png", title: "São José" },
+    { filename: "São Miguel réplica Monte Gargano.png", title: "São Miguel Réplica Monte Gargano" },
+    { filename: "São Miguel.png", title: "São Miguel" },
+    { filename: "São Rafael.png", title: "São Rafael" },
+    { filename: "Virgem de Guadalupe.png", title: "Virgem de Guadalupe" }
   ];
 
   // Auto-play do carrossel a cada 3 segundos
