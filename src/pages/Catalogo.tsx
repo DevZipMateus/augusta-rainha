@@ -1,13 +1,17 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingBag, MessageCircle, ArrowLeft } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { ShoppingBag, MessageCircle, ArrowLeft, ShoppingCart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Catalogo = () => {
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+
   // Lista completa das imagens na galeria
   const galleryImages = [
     { filename: "bones com diversas estampas.jpg", title: "Bonés com Diversas Estampas" },
@@ -56,6 +60,31 @@ const Catalogo = () => {
     window.open(url, '_blank');
   };
 
+  const handleProductSelection = (productTitle: string, checked: boolean) => {
+    if (checked) {
+      setSelectedProducts(prev => [...prev, productTitle]);
+    } else {
+      setSelectedProducts(prev => prev.filter(item => item !== productTitle));
+    }
+  };
+
+  const handleSendSelectedProducts = () => {
+    if (selectedProducts.length === 0) {
+      alert("Selecione pelo menos um produto para enviar!");
+      return;
+    }
+
+    const productList = selectedProducts.map((product, index) => `${index + 1}. ${product}`).join('\n');
+    const message = `Olá! Gostaria de solicitar informações sobre os seguintes produtos da Augusta Rainha:\n\n${productList}\n\nObrigado!`;
+    const phone = "5519971476970";
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
+  const clearSelection = () => {
+    setSelectedProducts([]);
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -86,6 +115,34 @@ const Catalogo = () => {
               </p>
             </div>
 
+            {/* Barra de seleção fixa */}
+            {selectedProducts.length > 0 && (
+              <div className="fixed bottom-20 left-4 right-4 bg-white shadow-lg border rounded-lg p-4 z-40 mx-auto max-w-md">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-sm font-medium">
+                    {selectedProducts.length} produto(s) selecionado(s)
+                  </span>
+                  <div className="flex gap-2">
+                    <Button
+                      onClick={clearSelection}
+                      variant="outline"
+                      size="sm"
+                    >
+                      Limpar
+                    </Button>
+                    <Button
+                      onClick={handleSendSelectedProducts}
+                      size="sm"
+                      className="bg-green-600 hover:bg-green-700 text-white"
+                    >
+                      <MessageCircle className="w-4 h-4 mr-1" />
+                      Enviar Lista
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Grid completo de produtos com responsividade melhorada */}
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4 md:gap-6">
               {galleryImages.map((image, index) => (
@@ -93,14 +150,27 @@ const Catalogo = () => {
                   key={index}
                   className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-primary/20"
                 >
-                  <div className="aspect-[3/4] overflow-hidden bg-gray-50 flex items-center justify-center">
-                    <img
-                      src={`/lovable-uploads/galeria/${image.filename}`}
-                      alt={image.title}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2"
-                      loading="lazy"
-                    />
+                  <div className="relative">
+                    {/* Checkbox de seleção */}
+                    <div className="absolute top-2 left-2 z-10">
+                      <Checkbox
+                        id={`product-${index}`}
+                        checked={selectedProducts.includes(image.title)}
+                        onCheckedChange={(checked) => handleProductSelection(image.title, checked as boolean)}
+                        className="bg-white border-2 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                      />
+                    </div>
+                    
+                    <div className="aspect-[3/4] overflow-hidden bg-gray-50 flex items-center justify-center">
+                      <img
+                        src={`/lovable-uploads/galeria/${image.filename}`}
+                        alt={image.title}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
+                  
                   <CardContent className="p-3 md:p-4 space-y-2 md:space-y-3">
                     <h3 className="font-serif text-sm md:text-base font-semibold text-secondary text-center leading-tight min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center">
                       {image.title}
