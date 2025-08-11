@@ -79,7 +79,13 @@ const ProductGallerySection = () => {
 
         {/* Carrossel principal */}
         <div className="mb-12 animate-on-scroll">
-          <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
+          <Carousel 
+            setApi={setApi} 
+            className="w-full max-w-4xl mx-auto"
+            opts={{
+              loop: true
+            }}
+          >
             <CarouselContent>
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index}>
