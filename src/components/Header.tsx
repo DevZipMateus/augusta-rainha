@@ -41,15 +41,12 @@ const Header = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white shadow-xl border-b border-primary/10' 
-          : 'bg-black/60 backdrop-blur-md'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-xl border-b border-primary/10"
+      style={{ backgroundColor: '#8bd9f8' }}
     >
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo - maximum text contrast */}
+          {/* Logo */}
           <div 
             className="flex items-center space-x-2 sm:space-x-3 cursor-pointer flex-shrink-0"
             onClick={() => scrollToSection('inicio')}
@@ -60,89 +57,51 @@ const Header = () => {
               className="h-10 sm:h-12 md:h-14 w-auto"
             />
             <div className="hidden sm:block">
-              <h1 className={`font-serif font-bold text-lg sm:text-xl md:text-2xl leading-tight ${
-                isScrolled 
-                  ? 'text-secondary' 
-                  : 'text-white'
-              }`}
-                style={!isScrolled ? { 
-                  textShadow: '3px 3px 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,1), 1px 1px 4px rgba(0,0,0,1)',
-                  filter: 'drop-shadow(0 0 6px rgba(0,0,0,1))'
-                } : {}}
-              >
+              <h1 className="font-serif font-bold text-lg sm:text-xl md:text-2xl leading-tight text-black">
                 Augusta Rainha
               </h1>
-              <p className={`text-sm sm:text-base font-medium ${
-                isScrolled 
-                  ? 'text-muted-foreground' 
-                  : 'text-white'
-              }`}
-                style={!isScrolled ? { 
-                  textShadow: '2px 2px 8px rgba(0,0,0,1), 0 0 15px rgba(0,0,0,1)',
-                  filter: 'drop-shadow(0 0 4px rgba(0,0,0,1))'
-                } : {}}
-              >
+              <p className="text-sm sm:text-base font-medium text-black">
                 Artigos Religiosos
               </p>
             </div>
           </div>
 
-          {/* Desktop Navigation - maximum text visibility */}
+          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-base font-semibold transition-colors hover:text-primary relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left ${
-                  isScrolled 
-                    ? 'text-secondary hover:text-primary' 
-                    : 'text-white hover:text-primary'
-                }`}
-                style={!isScrolled ? { 
-                  textShadow: '2px 2px 8px rgba(0,0,0,1), 0 0 12px rgba(0,0,0,1)',
-                  filter: 'drop-shadow(0 0 4px rgba(0,0,0,1))'
-                } : {}}
+                className="text-base font-semibold transition-colors hover:text-secondary relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-secondary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left text-black hover:text-secondary"
               >
                 {item.label}
               </button>
             ))}
           </nav>
 
-          {/* CTA Button - enhanced visibility */}
+          {/* CTA Button */}
           <div className="hidden lg:block flex-shrink-0">
             <Button
               onClick={() => scrollToSection('contato')}
-              className={`px-6 py-3 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl font-semibold ${
-                isScrolled 
-                  ? 'bg-primary hover:bg-primary/90 text-white shadow-lg'
-                  : 'bg-primary hover:bg-primary/80 text-white shadow-2xl border-2 border-white/20'
-              }`}
+              className="px-6 py-3 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl font-semibold bg-primary hover:bg-primary/90 text-white shadow-lg"
               size="default"
-              style={!isScrolled ? {
-                textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.4), 0 5px 15px rgba(0,0,0,0.2)'
-              } : {}}
             >
               Entre em Contato
             </Button>
           </div>
 
-          {/* Mobile Menu Button - enhanced visibility */}
+          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="icon"
-            className={`lg:hidden p-3 hover:bg-white/20 ${
-              isScrolled 
-                ? 'text-secondary hover:text-primary' 
-                : 'text-white hover:text-primary bg-black/20 backdrop-blur-sm border border-white/20'
-            }`}
+            className="lg:hidden p-3 hover:bg-black/10 text-black hover:text-secondary"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
 
-        {/* Mobile Menu - maximum contrast */}
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-primary/20 shadow-2xl">
             <nav className="flex flex-col p-6">
