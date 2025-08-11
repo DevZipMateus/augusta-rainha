@@ -28,15 +28,12 @@ const HeroSection = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20"
       style={{
-        backgroundImage: `url('/lovable-uploads/49a73916-2391-4089-bcab-39a3d39e9bcd.png')`,
+        backgroundImage: `url('/lovable-uploads/0e364294-c987-4391-bca8-69af452964b7.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Much stronger dark overlay for maximum text readability */}
-      <div className="absolute inset-0 bg-black/75 z-10"></div>
-
       {/* Background decorative elements - responsive positioning */}
       <div className="absolute inset-0 pointer-events-none z-20">
         <div className="absolute top-16 sm:top-20 left-4 sm:left-10 text-white/40">
