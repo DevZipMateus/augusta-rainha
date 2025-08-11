@@ -25,39 +25,6 @@ const ContactSection = () => {
     window.open('https://instagram.com/@artigosaugustarainha', '_blank');
   };
 
-  const contactMethods = [
-    {
-      icon: MessageCircle,
-      title: "WhatsApp",
-      description: "Resposta rápida e atendimento personalizado",
-      value: "(19) 97147-6970",
-      action: () => handleWhatsApp(),
-      color: "bg-green-600",
-      hoverColor: "hover:bg-green-700",
-      textColor: "text-white"
-    },
-    {
-      icon: Phone,
-      title: "Telefone",
-      description: "Ligue para tirar suas dúvidas",
-      value: "(19) 97147-6970",
-      action: () => window.open('tel:+5519971476970'),
-      color: "bg-primary",
-      hoverColor: "hover:bg-primary/90",
-      textColor: "text-white"
-    },
-    {
-      icon: Mail,
-      title: "E-mail",
-      description: "Envie sua mensagem detalhada",
-      value: "artigosreligiososaugustarainha@gmail.com",
-      action: handleEmail,
-      color: "bg-accent",
-      hoverColor: "hover:bg-accent/90",
-      textColor: "text-white"
-    }
-  ];
-
   return (
     <section id="contato" className="section-padding bg-gradient-to-b from-white to-primary/5">
       <div className="container">
@@ -75,39 +42,43 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* Contact Methods - enhanced text visibility */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {contactMethods.map((method, index) => (
-            <Card 
-              key={index}
-              className="group bg-white border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 animate-on-scroll shadow-lg"
-            >
-              <div className="p-8 text-center">
-                <div className={`inline-flex items-center justify-center w-16 h-16 ${method.color} rounded-full mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
-                  <method.icon className={method.textColor} size={32} />
+        {/* Single Contact Card */}
+        <div className="max-w-2xl mx-auto mb-16">
+          <Card className="group bg-white border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 animate-on-scroll shadow-lg">
+            <div className="p-8 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-600 rounded-full mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                <MessageCircle className="text-white" size={32} />
+              </div>
+              
+              <h3 className="font-serif text-2xl font-bold text-secondary mb-6">
+                Fale Conosco
+              </h3>
+              
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <Phone className="text-green-600" size={20} />
+                  <span className="text-secondary font-semibold text-lg">
+                    (19) 97147-6970
+                  </span>
                 </div>
                 
-                <h3 className="font-serif text-xl font-bold text-secondary mb-3">
-                  {method.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 text-sm font-medium">
-                  {method.description}
-                </p>
-                
-                <p className="text-secondary font-semibold mb-6 break-all text-sm">
-                  {method.value}
-                </p>
-
-                <Button
-                  onClick={method.action}
-                  className={`w-full ${method.color} ${method.hoverColor} ${method.textColor} font-semibold shadow-lg hover:shadow-xl transition-all duration-300`}
-                >
-                  Entrar em Contato
-                </Button>
+                <div className="flex items-center justify-center space-x-3">
+                  <Mail className="text-primary" size={20} />
+                  <span className="text-secondary font-semibold text-sm break-all">
+                    artigosreligiososaugustarainha@gmail.com
+                  </span>
+                </div>
               </div>
-            </Card>
-          ))}
+
+              <Button
+                onClick={() => handleWhatsApp()}
+                className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 py-4 text-lg"
+              >
+                <MessageCircle className="mr-3" size={24} />
+                Chamar no WhatsApp
+              </Button>
+            </div>
+          </Card>
         </div>
 
         {/* Additional Info - enhanced text readability */}
