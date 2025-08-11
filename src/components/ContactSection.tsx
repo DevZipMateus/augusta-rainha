@@ -32,11 +32,11 @@ const ContactSection = () => {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-6">
             <MessageCircle className="text-accent" size={32} />
           </div>
-          <h2 className="font-serif text-3xl md:text-5xl font-bold text-secondary mb-4">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Entre em Contato
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto font-medium">
+          <p className="text-xl text-gray-800 max-w-2xl mx-auto font-medium">
             Estamos aqui para ajudá-lo a encontrar os artigos religiosos perfeitos 
             para fortalecer sua fé e devoção
           </p>
@@ -50,21 +50,21 @@ const ContactSection = () => {
                 <MessageCircle className="text-white" size={32} />
               </div>
               
-              <h3 className="font-serif text-2xl font-bold text-secondary mb-6">
+              <h3 className="font-serif text-2xl font-bold text-gray-900 mb-6">
                 Fale Conosco
               </h3>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center justify-center space-x-3">
                   <Phone className="text-green-600" size={20} />
-                  <span className="text-secondary font-semibold text-lg">
+                  <span className="text-gray-900 font-semibold text-lg">
                     (19) 97147-6970
                   </span>
                 </div>
                 
                 <div className="flex items-center justify-center space-x-3">
                   <Mail className="text-primary" size={20} />
-                  <span className="text-secondary font-semibold text-sm break-all">
+                  <span className="text-gray-900 font-semibold text-sm break-all">
                     artigosreligiososaugustarainha@gmail.com
                   </span>
                 </div>
@@ -85,7 +85,7 @@ const ContactSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 animate-on-scroll">
           {/* Quick Contact */}
           <Card className="bg-gradient-to-br from-primary/10 via-white to-primary/5 border-2 border-primary/30 p-8 shadow-xl">
-            <h3 className="font-serif text-2xl font-bold text-secondary mb-6 text-center">
+            <h3 className="font-serif text-2xl font-bold text-gray-900 mb-6 text-center">
               Contato Rápido via WhatsApp
             </h3>
             
@@ -93,7 +93,7 @@ const ContactSection = () => {
               <Button
                 onClick={() => handleWhatsApp("Gostaria de saber mais sobre livros e Bíblias.")}
                 variant="outline"
-                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-secondary font-semibold hover:text-secondary transition-all duration-300"
+                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-gray-900 font-semibold hover:text-gray-900 transition-all duration-300"
               >
                 <MessageCircle className="mr-3 text-primary" size={20} />
                 Livros e Bíblias
@@ -102,7 +102,7 @@ const ContactSection = () => {
               <Button
                 onClick={() => handleWhatsApp("Tenho interesse em imagens de santos.")}
                 variant="outline"
-                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-secondary font-semibold hover:text-secondary transition-all duration-300"
+                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-gray-900 font-semibold hover:text-gray-900 transition-all duration-300"
               >
                 <MessageCircle className="mr-3 text-primary" size={20} />
                 Imagens de Santos
@@ -111,7 +111,7 @@ const ContactSection = () => {
               <Button
                 onClick={() => handleWhatsApp("Gostaria de ver terços e artigos de oração.")}
                 variant="outline"
-                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-secondary font-semibold hover:text-secondary transition-all duration-300"
+                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-gray-900 font-semibold hover:text-gray-900 transition-all duration-300"
               >
                 <MessageCircle className="mr-3 text-primary" size={20} />
                 Terços e Artigos de Oração
@@ -120,7 +120,7 @@ const ContactSection = () => {
               <Button
                 onClick={() => handleWhatsApp("Quero saber sobre vestuário religioso.")}
                 variant="outline"
-                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-secondary font-semibold hover:text-secondary transition-all duration-300"
+                className="w-full justify-start border-2 border-primary/40 hover:bg-primary/15 text-gray-900 font-semibold hover:text-gray-900 transition-all duration-300"
               >
                 <MessageCircle className="mr-3 text-primary" size={20} />
                 Vestuário Religioso
@@ -133,18 +133,18 @@ const ContactSection = () => {
             <Card className="bg-gradient-to-br from-accent/10 via-white to-accent/5 border-2 border-accent/30 p-6 shadow-xl">
               <div className="flex items-center space-x-3 mb-4">
                 <Clock className="text-accent" size={24} />
-                <h4 className="font-serif text-lg font-bold text-secondary">
+                <h4 className="font-serif text-lg font-bold text-gray-900">
                   Horários de Atendimento
                 </h4>
               </div>
-              <div className="space-y-2 text-gray-700 font-medium">
+              <div className="space-y-2 text-gray-800 font-medium">
                 <div className="flex justify-between">
                   <span>Segunda a Sexta:</span>
-                  <span className="font-bold text-secondary">9h às 18h</span>
+                  <span className="font-bold text-gray-900">9h às 18h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Sábado:</span>
-                  <span className="font-bold text-secondary">9h às 16h</span>
+                  <span className="font-bold text-gray-900">9h às 16h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Domingo:</span>
@@ -156,11 +156,11 @@ const ContactSection = () => {
             <Card className="bg-gradient-to-br from-secondary/10 via-white to-secondary/5 border-2 border-secondary/30 p-6 shadow-xl">
               <div className="flex items-center space-x-3 mb-4">
                 <MapPin className="text-secondary" size={24} />
-                <h4 className="font-serif text-lg font-bold text-secondary">
+                <h4 className="font-serif text-lg font-bold text-gray-900">
                   Localização
                 </h4>
               </div>
-              <p className="text-gray-700 mb-4 font-medium leading-relaxed">
+              <p className="text-gray-800 mb-4 font-medium leading-relaxed">
                 Avenida Pedro Antonio Bordignon, 494<br />
                 Bairro São José 1 - Galeria Arcanjo<br />
                 Paulínia / SP
@@ -178,11 +178,11 @@ const ContactSection = () => {
             <Card className="bg-gradient-to-br from-pink-100 via-white to-pink-50 border-2 border-pink-300 p-6 shadow-xl">
               <div className="flex items-center space-x-3 mb-4">
                 <Instagram className="text-pink-600" size={24} />
-                <h4 className="font-serif text-lg font-bold text-secondary">
+                <h4 className="font-serif text-lg font-bold text-gray-900">
                   Redes Sociais
                 </h4>
               </div>
-              <p className="text-gray-700 mb-4 font-medium">
+              <p className="text-gray-800 mb-4 font-medium">
                 Acompanhe nossas novidades, promoções e inspirações diárias no Instagram!
               </p>
               <Button
@@ -200,10 +200,10 @@ const ContactSection = () => {
         <div className="mt-16 text-center animate-on-scroll">
           <Card className="bg-gradient-to-r from-primary/15 via-accent/15 to-secondary/15 border-2 border-primary/30 p-12 shadow-2xl">
             <MessageCircle className="text-primary mx-auto mb-6" size={48} />
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-secondary mb-4">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Pronto para Fortalecer sua Fé?
             </h3>
-            <p className="text-gray-700 mb-8 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
+            <p className="text-gray-800 mb-8 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
               Entre em contato conosco hoje mesmo e descubra como nossos artigos religiosos 
               podem enriquecer sua vida espiritual e sua devoção.
             </p>
