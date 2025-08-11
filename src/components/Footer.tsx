@@ -1,4 +1,3 @@
-
 import { Heart, MapPin, Phone, Mail, Instagram, Cross } from "lucide-react";
 
 const Footer = () => {
@@ -39,11 +38,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
-              <img
-                src="/lovable-uploads/08b68b12-98ba-4e65-8e95-5eead742f40e.png"
-                alt="Augusta Rainha"
-                className="h-12 w-auto"
-              />
+              <div className="bg-white rounded-full p-1">
+                <img
+                  src="/lovable-uploads/08b68b12-98ba-4e65-8e95-5eead742f40e.png"
+                  alt="Augusta Rainha"
+                  className="h-10 w-10 rounded-full"
+                />
+              </div>
               <div>
                 <h3 className="font-serif text-xl font-bold text-white">Augusta Rainha</h3>
                 <p className="text-white text-sm font-medium">Artigos Religiosos Católico</p>
