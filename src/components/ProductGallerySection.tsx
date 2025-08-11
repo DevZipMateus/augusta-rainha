@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, MessageCircle } from "lucide-react";
@@ -105,7 +104,7 @@ const ProductGallerySection = () => {
         <div className="mb-12 animate-on-scroll">
           <Carousel 
             setApi={setApi} 
-            className="w-full max-w-4xl mx-auto"
+            className="w-full max-w-5xl mx-auto"
             opts={{
               loop: true
             }}
@@ -113,23 +112,23 @@ const ProductGallerySection = () => {
             <CarouselContent>
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index}>
-                  <div className="aspect-video relative overflow-hidden rounded-lg">
+                  <div className="aspect-video md:aspect-[16/10] relative overflow-hidden rounded-lg bg-gray-50 flex items-center justify-center">
                     <img
                       src={`/lovable-uploads/galeria/${image.filename}`}
                       alt={image.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain p-4 md:p-8"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                      <h3 className="text-white font-serif text-2xl font-semibold mb-2">
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 md:p-6">
+                      <h3 className="text-white font-serif text-lg md:text-2xl font-semibold mb-2 md:mb-3">
                         {image.title}
                       </h3>
                       <Button
                         onClick={() => handleProductWhatsApp(image.title)}
                         variant="outline"
                         size="sm"
-                        className="bg-green-50 hover:bg-green-100 text-green-700 border-green-200 hover:border-green-300"
+                        className="bg-green-50 hover:bg-green-100 text-green-700 border-green-200 hover:border-green-300 text-xs md:text-sm"
                       >
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                        <MessageCircle className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
                         Veja todos os modelos
                       </Button>
                     </div>
@@ -137,16 +136,16 @@ const ProductGallerySection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
           </Carousel>
           
           {/* Indicadores do carrossel */}
-          <div className="flex justify-center mt-4 gap-2">
+          <div className="flex justify-center mt-4 gap-2 flex-wrap">
             {galleryImages.map((_, index) => (
               <button
                 key={index}
-                className={`w-3 h-3 rounded-full transition-colors ${
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
                   index === current ? 'bg-primary' : 'bg-primary/30'
                 }`}
                 onClick={() => api?.scrollTo(index)}
@@ -156,22 +155,22 @@ const ProductGallerySection = () => {
         </div>
 
         {/* Grid de produtos menor */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4 mb-12">
           {galleryImages.slice(0, 6).map((image, index) => (
             <Card 
               key={index}
-              className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-on-scroll border-primary/20"
+              className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-on-scroll border-primary/20"
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden bg-gray-50 flex items-center justify-center">
                 <img
                   src={`/lovable-uploads/galeria/${image.filename}`}
                   alt={image.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 p-2"
                   loading="lazy"
                 />
               </div>
-              <CardContent className="p-3">
-                <h3 className="font-serif text-sm font-semibold text-secondary text-center leading-tight">
+              <CardContent className="p-2 md:p-3">
+                <h3 className="font-serif text-xs md:text-sm font-semibold text-secondary text-center leading-tight min-h-[2rem] md:min-h-[2.5rem] flex items-center justify-center">
                   {image.title}
                 </h3>
               </CardContent>
