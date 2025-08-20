@@ -1,4 +1,5 @@
 
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Book, Shirt, Cross, Heart, Flame, Sparkles } from "lucide-react";
@@ -73,7 +74,7 @@ const ServicesSection = () => {
             Nossos Artigos Religiosos
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Uma seleção cuidadosa de artigos católicos para fortalecer sua fé e enriquecer sua vida espiritual
           </p>
         </div>
@@ -84,7 +85,7 @@ const ServicesSection = () => {
               key={index}
               className={`group bg-gradient-to-br ${category.gradient} border-2 border-${category.color}/20 hover:border-${category.color}/40 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-on-scroll`}
             >
-              <div className="p-8">
+              <div className="p-6 sm:p-8">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-${category.color}/10 rounded-full mb-6 group-hover:bg-${category.color}/20 transition-colors`}>
                   <category.icon className={`text-${category.color}`} size={32} />
                 </div>
@@ -108,9 +109,9 @@ const ServicesSection = () => {
 
                 <Button
                   onClick={() => handleWhatsApp(category.title)}
-                  className={`w-full bg-${category.color} hover:bg-${category.color}/90 text-white`}
+                  className={`w-full bg-${category.color} hover:bg-${category.color}/90 text-white px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base min-h-[44px]`}
                 >
-                  Ver Imagens - {category.title}
+                  <span className="truncate">Ver Imagens - {category.title}</span>
                 </Button>
               </div>
             </Card>
@@ -119,22 +120,24 @@ const ServicesSection = () => {
 
         {/* CTA Section */}
         <div className="mt-16 text-center animate-on-scroll">
-          <div className="bg-gradient-to-r from-primary/10 via-white to-accent/10 rounded-3xl p-12 border border-primary/20">
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-secondary mb-4">
+          <div className="bg-gradient-to-r from-primary/10 via-white to-accent/10 rounded-3xl p-6 sm:p-8 md:p-12 border border-primary/20">
+            <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-secondary mb-4 px-4">
               Não encontrou o que procura?
             </h3>
-            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-8 max-w-2xl mx-auto px-4">
               Entre em contato conosco! Temos uma ampla variedade de artigos religiosos e 
               podemos enviar imagens dos produtos que você procura.
             </p>
-            <Button
-              onClick={() => handleWhatsApp("informações e imagens de produtos disponíveis")}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-6 rounded-full"
-            >
-              <Heart className="mr-2" size={20} />
-              Solicitar Imagens no WhatsApp
-            </Button>
+            <div className="px-4">
+              <Button
+                onClick={() => handleWhatsApp("informações e imagens de produtos disponíveis")}
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white w-full sm:w-auto px-4 sm:px-6 md:px-8 py-4 sm:py-6 text-sm sm:text-base md:text-lg rounded-full min-h-[44px]"
+              >
+                <Heart className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
+                <span className="truncate">Solicitar Imagens no WhatsApp</span>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -143,3 +146,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
