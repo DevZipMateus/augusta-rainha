@@ -1,7 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ShoppingBag, Eye } from "lucide-react";
+import { ShoppingBag, Eye, ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ProductGallerySection = () => {
@@ -21,8 +21,21 @@ const ProductGallerySection = () => {
           </p>
         </div>
 
-        <div className="text-center animate-on-scroll">
-          <div className="bg-primary rounded-3xl p-12 md:p-16 max-w-4xl mx-auto text-white">
+        <div className="text-center animate-on-scroll relative">
+          {/* Top arrows */}
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 hidden md:block">
+            <ArrowDown className="text-primary animate-bounce" size={32} />
+          </div>
+          
+          {/* Side arrows */}
+          <div className="absolute top-1/2 -left-8 transform -translate-y-1/2 rotate-90 hidden lg:block">
+            <ArrowDown className="text-primary animate-pulse" size={28} />
+          </div>
+          <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 -rotate-90 hidden lg:block">
+            <ArrowDown className="text-primary animate-pulse" size={28} />
+          </div>
+
+          <div className="bg-primary rounded-3xl p-12 md:p-16 max-w-4xl mx-auto text-white relative overflow-hidden">
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
                 <Eye className="text-white" size={40} />
@@ -39,12 +52,31 @@ const ProductGallerySection = () => {
             <Link to="/catalogo">
               <Button
                 size="lg"
-                className="bg-white hover:bg-white/90 text-primary px-12 py-6 text-xl md:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white hover:bg-white/90 text-primary px-12 py-6 text-xl md:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-pulse"
               >
                 <Eye className="w-6 h-6 md:w-8 md:h-8 mr-3" />
                 Confira Nosso Catálogo
               </Button>
             </Link>
+
+            {/* Corner arrows inside the blue box */}
+            <div className="absolute top-4 left-4">
+              <ArrowDown className="text-white/60 animate-ping transform rotate-45" size={20} />
+            </div>
+            <div className="absolute top-4 right-4">
+              <ArrowDown className="text-white/60 animate-ping transform -rotate-45" size={20} />
+            </div>
+            <div className="absolute bottom-4 left-4">
+              <ArrowDown className="text-white/60 animate-ping transform rotate-135" size={20} />
+            </div>
+            <div className="absolute bottom-4 right-4">
+              <ArrowDown className="text-white/60 animate-ping transform -rotate-135" size={20} />
+            </div>
+          </div>
+
+          {/* Bottom arrows */}
+          <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 rotate-180 hidden md:block">
+            <ArrowDown className="text-primary animate-bounce" size={32} />
           </div>
         </div>
       </div>
