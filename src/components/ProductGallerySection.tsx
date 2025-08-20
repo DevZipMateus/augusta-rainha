@@ -22,15 +22,15 @@ const ProductGallerySection = () => {
         </div>
 
         <div className="text-center animate-on-scroll">
-          <div className="bg-primary/5 rounded-3xl p-12 md:p-16 max-w-4xl mx-auto">
+          <div className="bg-primary rounded-3xl p-12 md:p-16 max-w-4xl mx-auto text-white">
             <div className="mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary/20 rounded-full mb-6">
-                <Eye className="text-primary" size={40} />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
+                <Eye className="text-white" size={40} />
               </div>
-              <h3 className="font-serif text-2xl md:text-3xl font-bold text-secondary mb-4">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
                 Explore Nossa Coleção Completa
               </h3>
-              <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
                 Descubra todos os nossos artigos religiosos católicos disponíveis em nossa loja. 
                 Imagens de santos, terços, velas, livros e muito mais para enriquecer sua vida espiritual.
               </p>
@@ -39,7 +39,7 @@ const ProductGallerySection = () => {
             <Link to="/catalogo">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl md:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                className="bg-white hover:bg-white/90 text-primary px-12 py-6 text-xl md:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 <Eye className="w-6 h-6 md:w-8 md:h-8 mr-3" />
                 Confira Nosso Catálogo
