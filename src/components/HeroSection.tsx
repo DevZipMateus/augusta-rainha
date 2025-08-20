@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Book, Cross } from "lucide-react";
 const HeroSection = () => {
@@ -19,13 +18,7 @@ const HeroSection = () => {
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
-  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20" style={{
-    backgroundImage: `url('/lovable-uploads/b8b71cb0-a21c-406f-a28b-14be45b44ae8.png')`,
-    backgroundSize: 'contain',
-    backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed'
-  }}>
+  return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20">
       {/* Much stronger dark overlay for maximum text readability */}
       <div className="absolute inset-0 z-10 bg-black/30"></div>
 
