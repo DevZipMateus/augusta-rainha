@@ -19,7 +19,7 @@ const HeroSection = () => {
     window.open(url, '_blank');
   };
   return <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900 pt-16 sm:pt-20" style={{
-    backgroundImage: `url('/lovable-uploads/af34a233-67c2-4605-8404-fcbdd0926b59.png')`,
+    backgroundImage: `url('/lovable-uploads/b8b71cb0-a21c-406f-a28b-14be45b44ae8.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'
