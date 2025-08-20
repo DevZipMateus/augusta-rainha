@@ -52,7 +52,7 @@ const ProductGallerySection = () => {
             <Link to="/catalogo">
               <Button
                 size="lg"
-                className="bg-white hover:bg-white/90 text-primary px-12 py-6 text-xl md:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-[pulse_3s_ease-in-out_infinite]"
+                className="bg-white hover:bg-white/90 text-primary px-12 py-6 text-xl md:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-[pulse_5s_ease-in-out_infinite]"
               >
                 <Eye className="w-6 h-6 md:w-8 md:h-8 mr-3" />
                 Confira Nosso Catálogo
