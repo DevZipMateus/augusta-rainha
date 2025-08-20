@@ -1,4 +1,5 @@
 
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, MessageCircle, Instagram, Clock, MapPin } from "lucide-react";
@@ -196,25 +197,27 @@ const ContactSection = () => {
           </div>
         </div>
 
-        {/* Call to Action - enhanced visibility */}
+        {/* Call to Action - enhanced visibility and mobile responsiveness */}
         <div className="mt-16 text-center animate-on-scroll">
-          <Card className="bg-gradient-to-r from-primary/15 via-accent/15 to-secondary/15 border-2 border-primary/30 p-12 shadow-2xl">
+          <Card className="bg-gradient-to-r from-primary/15 via-accent/15 to-secondary/15 border-2 border-primary/30 p-6 sm:p-8 md:p-12 shadow-2xl">
             <MessageCircle className="text-primary mx-auto mb-6" size={48} />
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 px-4">
               Pronto para Fortalecer sua Fé?
             </h3>
-            <p className="text-gray-800 mb-8 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
+            <p className="text-gray-800 mb-8 max-w-2xl mx-auto text-base sm:text-lg font-medium leading-relaxed px-4">
               Entre em contato conosco hoje mesmo e descubra como nossos artigos religiosos 
               podem enriquecer sua vida espiritual e sua devoção.
             </p>
-            <Button
-              onClick={() => handleWhatsApp()}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-12 py-6 rounded-full text-lg shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 font-bold border-2 border-white/20"
-            >
-              <MessageCircle className="mr-3" size={24} />
-              Fale Conosco Agora
-            </Button>
+            <div className="px-4">
+              <Button
+                onClick={() => handleWhatsApp()}
+                size="lg"
+                className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white px-4 sm:px-8 md:px-12 py-4 sm:py-6 rounded-full text-sm sm:text-base md:text-lg shadow-2xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 font-bold border-2 border-white/20 min-h-[48px]"
+              >
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2 sm:mr-3 flex-shrink-0" />
+                <span className="truncate">Fale Conosco Agora</span>
+              </Button>
+            </div>
           </Card>
         </div>
       </div>
@@ -223,3 +226,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
