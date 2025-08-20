@@ -5,7 +5,7 @@ import { Book, Shirt, Cross, Heart, Flame, Sparkles } from "lucide-react";
 
 const ServicesSection = () => {
   const handleWhatsApp = (category: string) => {
-    const message = `Olá! Gostaria de saber mais sobre ${category} da Augusta Rainha.`;
+    const message = `Olá! Gostaria de ver imagens dos produtos da categoria "${category}" da Augusta Rainha. Podem me enviar algumas fotos dos produtos disponíveis?`;
     const phone = "5519971476970";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
@@ -110,7 +110,7 @@ const ServicesSection = () => {
                   onClick={() => handleWhatsApp(category.title)}
                   className={`w-full bg-${category.color} hover:bg-${category.color}/90 text-white`}
                 >
-                  Ver {category.title}
+                  Ver Imagens - {category.title}
                 </Button>
               </div>
             </Card>
@@ -125,15 +125,15 @@ const ServicesSection = () => {
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               Entre em contato conosco! Temos uma ampla variedade de artigos religiosos e 
-              podemos ajudá-lo a encontrar exatamente o que precisa para sua devoção.
+              podemos enviar imagens dos produtos que você procura.
             </p>
             <Button
-              onClick={() => handleWhatsApp("informações sobre produtos disponíveis")}
+              onClick={() => handleWhatsApp("informações e imagens de produtos disponíveis")}
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white px-8 py-6 rounded-full"
             >
               <Heart className="mr-2" size={20} />
-              Fale Conosco no WhatsApp
+              Solicitar Imagens no WhatsApp
             </Button>
           </div>
         </div>
