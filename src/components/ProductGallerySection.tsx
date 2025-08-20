@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ShoppingBag, Eye, ArrowDown } from "lucide-react";
@@ -15,7 +16,7 @@ const ProductGallerySection = () => {
             Um Pouco Sobre Nossos Produtos
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Conheça alguns dos nossos artigos religiosos católicos cuidadosamente selecionados para fortalecer sua fé
           </p>
         </div>
@@ -34,29 +35,31 @@ const ProductGallerySection = () => {
             <ArrowDown className="text-primary animate-pulse" size={28} />
           </div>
 
-          <div className="bg-primary rounded-3xl p-12 md:p-16 max-w-4xl mx-auto text-white relative overflow-hidden">
+          <div className="bg-primary rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 max-w-4xl mx-auto text-white relative overflow-hidden">
             <div className="mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
-                <Eye className="text-white" size={40} />
+              <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white/20 rounded-full mb-6">
+                <Eye className="text-white" size={32} />
               </div>
-              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold mb-4 px-4">
                 Explore Nossa Coleção Completa
               </h3>
-              <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg text-white/90 mb-8 max-w-2xl mx-auto px-4">
                 Descubra todos os nossos artigos religiosos católicos disponíveis em nossa loja. 
                 Imagens de santos, terços, velas, livros e muito mais para enriquecer sua vida espiritual.
               </p>
             </div>
             
-            <Link to="/catalogo">
-              <Button
-                size="lg"
-                className="bg-white hover:bg-white/90 text-primary px-12 py-6 text-xl md:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-[pulse_20s_ease-in-out_infinite]"
-              >
-                <Eye className="w-6 h-6 md:w-8 md:h-8 mr-3" />
-                Confira Nosso Catálogo
-              </Button>
-            </Link>
+            <div className="px-4">
+              <Link to="/catalogo" className="inline-block w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="bg-white hover:bg-white/90 text-primary w-full sm:w-auto px-6 sm:px-8 md:px-12 py-4 sm:py-6 text-base sm:text-lg md:text-xl lg:text-2xl rounded-full font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-[pulse_12s_ease-in-out_infinite] min-h-[44px]"
+                >
+                  <Eye className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 mr-2 sm:mr-3 flex-shrink-0" />
+                  <span className="truncate">Confira Nosso Catálogo</span>
+                </Button>
+              </Link>
+            </div>
 
             {/* Corner arrows inside the blue box */}
             <div className="absolute top-4 left-4">
