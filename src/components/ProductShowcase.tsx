@@ -51,11 +51,11 @@ const ProductShowcase = () => {
                   className="relative group cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-card"
                   onClick={() => setSelectedImage(image.src)}
                 >
-                  <div className="aspect-square overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden bg-muted/30">
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                     />
                   </div>
