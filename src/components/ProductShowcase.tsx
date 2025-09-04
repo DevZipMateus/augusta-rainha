@@ -14,7 +14,7 @@ const ProductShowcase = () => {
       alt: "A Fé que Ilumina o Lar - Imagens religiosas para devoção"
     },
     {
-      src: "/lovable-uploads/ef354f04-0fd4-487b-bf93-2f2431693e25.png",
+      src: "/lovable-uploads/fedff7e4-7c45-4505-a6f1-2533a4c7af86.png",
       alt: "Cruz Sagrada - Símbolos de proteção e fé"
     },
     {
